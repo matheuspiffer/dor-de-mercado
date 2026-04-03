@@ -141,20 +141,20 @@ export default function Home() {
   };
 
   return (
-    <main className="flex-1 flex items-center justify-center px-4 py-12">
+    <main className="flex-1 flex items-center justify-center px-3 py-8 sm:px-4 sm:py-12">
       <div className="w-full max-w-lg">
         {/* Header */}
-        <div className="text-center mb-8 animate-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm mb-4">
+        <div className="text-center mb-5 sm:mb-8 animate-in">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs sm:text-sm mb-3">
             <span>🔍</span>
             <span>Pesquisa rápida — 2 min</span>
           </div>
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-1 bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent">
             Dor de Mercado
           </h1>
-          <p className="text-slate-400 text-base">
-            Compartilhe seus maiores desafios profissionais e nos ajude a criar
-            soluções que realmente fazem a diferença.
+          <p className="text-slate-400 text-sm sm:text-base">
+            Compartilhe seus desafios profissionais e nos ajude a criar
+            soluções que fazem a diferença.
           </p>
         </div>
 
@@ -171,19 +171,19 @@ export default function Home() {
         </div>
 
         {/* Form Card */}
-        <div className="glass-card p-8">
+        <div className="glass-card p-4 sm:p-8">
           <h2 className="text-lg font-semibold mb-1 text-white">
             {STEPS[step - 1].title}
           </h2>
-          <p className="text-sm text-slate-400 mb-6">
+          <p className="text-sm text-slate-400 mb-4 sm:mb-6">
             Etapa {step} de {STEPS.length}
           </p>
 
           {/* Step 1: About You */}
           {step === 1 && (
-            <div className="space-y-4 animate-in">
+            <div className="space-y-3 sm:space-y-4 animate-in">
               <div>
-                <label className="block text-sm text-slate-300 mb-1.5">
+                <label className="block text-sm text-slate-300 mb-1">
                   Nome completo
                 </label>
                 <input
@@ -195,7 +195,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-300 mb-1.5">
+                <label className="block text-sm text-slate-300 mb-1">
                   Email
                 </label>
                 <input
@@ -207,7 +207,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-300 mb-1.5">
+                <label className="block text-sm text-slate-300 mb-1">
                   Cargo / Função
                 </label>
                 <input
@@ -219,7 +219,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-300 mb-1.5">
+                <label className="block text-sm text-slate-300 mb-1">
                   Área de atuação
                 </label>
                 <select
@@ -240,9 +240,9 @@ export default function Home() {
 
           {/* Step 2: Pain Points */}
           {step === 2 && (
-            <div className="space-y-4 animate-in">
+            <div className="space-y-3 sm:space-y-4 animate-in">
               <div>
-                <label className="block text-sm text-slate-300 mb-1.5">
+                <label className="block text-sm text-slate-300 mb-1">
                   Qual é o maior problema ou frustração que você enfrenta no seu
                   trabalho?
                 </label>
@@ -290,9 +290,9 @@ export default function Home() {
 
           {/* Step 3: Solutions */}
           {step === 3 && (
-            <div className="space-y-4 animate-in">
+            <div className="space-y-3 sm:space-y-4 animate-in">
               <div>
-                <label className="block text-sm text-slate-300 mb-1.5">
+                <label className="block text-sm text-slate-300 mb-1">
                   Como você resolve (ou tenta resolver) esse problema hoje?
                 </label>
                 <textarea
@@ -334,7 +334,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm text-slate-300 mb-1.5">
+                <label className="block text-sm text-slate-300 mb-1">
                   Algo mais que queira compartilhar? (opcional)
                 </label>
                 <textarea
@@ -358,7 +358,7 @@ export default function Home() {
           )}
 
           {/* Navigation */}
-          <div className="flex gap-3 mt-8">
+          <div className="flex gap-3 mt-5 sm:mt-8">
             {step > 1 && (
               <button
                 type="button"
